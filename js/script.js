@@ -44,6 +44,8 @@ button.onclick = () => {
   console.log(newTarefa)
   valueTarefa.value = ''
   contadorTarefa++
+
+  return verificarCheck()
 }
 
 
@@ -67,11 +69,11 @@ boxTarefas.onclick = (event) => {
   }
 }
 
-setInterval(() => {
+function verificarCheck() {
   if (contadorTarefa) {
     const allCheck = document.querySelectorAll('.check')
     allCheck.forEach(check => {
       check.classList.contains('checked') ? check.checked = true : check.checked = false;
     })
   }
-}, 10);
+}
