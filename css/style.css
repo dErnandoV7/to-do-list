@@ -92,14 +92,17 @@ span {
 
 /* Adicionar nova tarefa */
 .adicionar-tarefa {
-  display: flex;
-  justify-content: center;
   padding: 1rem 1rem 8px;
   width: 100%;
   max-width: 500px;
 }
 
-.adicionar-tarefa input {
+.adicionar-tarefa form {
+  display: flex;
+  justify-content: center;
+}
+
+.adicionar-tarefa input[type='text'] {
   padding: 1rem 0.7rem;
   font-size: 14px;
   flex: 2 1;
@@ -110,11 +113,11 @@ span {
   letter-spacing: 1px;
 }
 
-.adicionar-tarefa input:focus {
+.adicionar-tarefa input[type='text']:focus {
   outline: none;
 }
 
-.adicionar-tarefa span {
+.adicionar-tarefa input[type='submit'] {
   flex: 1 1;
   display: flex;
   align-items: center;
@@ -122,5 +125,5 @@ span {
   background: var(--color-fontA);
   color: #fff;
   border-radius: 0 8px 8px 0;
+  border: none
 }
-
